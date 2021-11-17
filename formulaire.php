@@ -29,7 +29,7 @@
 			echo "Age conforme" . "<br>";
 		}
 	}
-		
+
 
 	if (!empty($_POST['mail'])) { //Champ du Mail
 		if(filter_var($_POST['mail'],FILTER_VALIDATE_EMAIL)===false){
@@ -40,23 +40,13 @@
 			echo "Courriel conforme" . "<br>";
 		}
 	}
-	
-	if (empty($_POST['classe'])) { // Champs de la Classe
-			echo "Erreur de classe" . "<br>";
-		}
-		else {
-			echo "Classe conforme" . "<br>";
-		}
 
-		
-		
-
-	if (!isset($_POST['choix[]'])){ //Choix d'Orientation 
+	if (!isset($_POST['choix[]'])){ //Choix d'Orientation
 		foreach ($_POST['choix'] as $val){
 			echo $val."<br>";
 		}
 	}
-	
+
 	else{
 		echo "Vous n'avez rien coché la case" . "<br>";
 	}
